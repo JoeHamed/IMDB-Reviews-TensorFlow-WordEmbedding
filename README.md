@@ -34,4 +34,66 @@ The IMDB Reviews dataset is a collection of movie reviews labeled as either posi
     - Saving word embeddings to files for visualization purposes.
 
 ## Project Structure
-. ├── README.md # Project description ├── vecs.tsv # Word vectors (embedding weights) ├── meta.tsv # Vocabulary (words) ├── model.py # Python script containing model code ├── requirements.txt # List of dependencies └── data/ # Directory containing the IMDB dataset
+
+
+## Installation
+
+### Prerequisites
+Make sure you have Python 3.11 or higher installed. You also need to install the necessary Python libraries to run the project. You can install the dependencies via `pip`.
+
+### Steps to Install
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/your-username/imdb-reviews-classifier.git
+    cd imdb-reviews-classifier
+    ```
+
+2. Create a virtual environment (optional but recommended):
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+    ```
+
+3. Install the required dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. Make sure TensorFlow and TensorFlow Datasets are installed. If not, install them manually:
+    ```bash
+    pip install tensorflow tensorflow-datasets
+    ```
+
+## Usage
+
+### Running the Model
+After setting up the environment, you can run the training script by executing the following command:
+
+```bash
+python model.py
+```
+This will:
+
+- Load the IMDB dataset.
+- Preprocess the data (tokenization, padding).
+- Train the binary classifier.
+- Output the word embeddings to `vecs.tsv` and `meta.tsv`.
+
+## Model Architecture
+The model architecture consists of:
+
+- Input Layer: Accepts sequences of text with a maximum length of 120.
+- Embedding Layer: Converts each word to a dense vector of size 16.
+- Flatten Layer: Flattens the embeddings into a 1D vector.
+- Dense Layer: A fully connected layer with 6 neurons and ReLU activation.
+- Output Layer: A single neuron with a sigmoid activation for binary classification.
+
+```python
+model = tf.keras.Sequential([
+    tf.keras.Input(shape=(MAX_LENGTH,)),
+    tf.keras.layers.Embedding(VOCAB_SIZE, EMBEDDING_DIM),
+    tf.keras.layers.Flatten(),
+    tf.keras.layers.Dense(6, activation='relu'),
+    tf.keras.layers.Dense(1, activation='sigmoid')
+])
+```

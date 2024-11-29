@@ -10,8 +10,6 @@ This project demonstrates how to train a binary classifier using the IMDB Review
 - [Model Architecture](#model-architecture)
 - [Training](#training)
 - [Visualizing Word Embeddings](#visualizing-word-embeddings)
-- [Results](#results)
-- [License](#license)
 
 ## Overview
 
@@ -44,13 +42,13 @@ Make sure you have Python 3.11 or higher installed. You also need to install the
 ### Steps to Install
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/imdb-reviews-classifier.git
+    git clone https://github.com/JoeHamed/IMDB-Reviews-TensorFlow-WordEmbedding.git
     cd imdb-reviews-classifier
     ```
 
 2. Create a virtual environment (optional but recommended):
     ```bash
-    python3 -m venv venv
+    python -m venv venv
     source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
     ```
 

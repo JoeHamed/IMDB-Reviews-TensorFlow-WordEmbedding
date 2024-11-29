@@ -101,5 +101,6 @@ The model is trained for 5 epochs using the Adam optimizer and binary cross-entr
 model.fit(train_dataset_final, epochs=NUM_EPOCHS, validation_data=test_dataset_final)
 ```
 ## Visualizing Word Embeddings
-After training the model, the word embeddings are saved to vecs.tsv (embedding vectors) and meta.tsv (words). These files can be used for visualizing the word vectors in 2D using tools like t-SNE or TensorBoard.
+- After training the model, the word embeddings are saved to vecs.tsv (embedding vectors) and meta.tsv (words). These files can be used for visualizing the word vectors in 2D using tools like t-SNE or TensorBoard.
+- You can also visualize it using:  https://projector.tensorflow.org/
 

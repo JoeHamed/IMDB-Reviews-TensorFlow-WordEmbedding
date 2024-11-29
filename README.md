@@ -34,4 +34,4 @@ The IMDB Reviews dataset is a collection of movie reviews labeled as either posi
     - Saving word embeddings to files for visualization purposes.
 
 ## Project Structure
-
+. ├── README.md # Project description ├── vecs.tsv # Word vectors (embedding weights) ├── meta.tsv # Vocabulary (words) ├── model.py # Python script containing model code ├── requirements.txt # List of dependencies └── data/ # Directory containing the IMDB dataset

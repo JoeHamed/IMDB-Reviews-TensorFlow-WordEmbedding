@@ -104,6 +104,8 @@ model.fit(train_dataset_final, epochs=NUM_EPOCHS, validation_data=test_dataset_f
 - After training the model, the word embeddings are saved to vecs.tsv (embedding vectors) and meta.tsv (words). These files can be used for visualizing the word vectors in 2D using tools like t-SNE or TensorBoard.
 - You can also visualize it using:  https://projector.tensorflow.org/
 
+### Positive and Negative Words
 ![image](https://github.com/user-attachments/assets/c5adccc4-a09c-45a4-a642-22a4bea314b1)
 
+### Looking for a specific word
 ![image](https://github.com/user-attachments/assets/4dd54fe3-748c-4171-beb0-afbc4e9cbe88)
